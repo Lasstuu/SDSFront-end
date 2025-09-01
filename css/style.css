@@ -17,7 +17,7 @@ body {
     background-color: #f0f0f0;
     color: var(--text-color);
     line-height: 1.6;
-    
+    overflow-x: hidden;
 }
 a {
     color: var(--primary-color);
@@ -52,7 +52,7 @@ img {
     transition: 0.25s;
 }
 .navbar ul li a:hover{
-    background-color: var(--hover-color);
+    color: var(--hover-color);
 }
 /*Hero*/
 .hero {
@@ -61,16 +61,7 @@ img {
 .hero .container {
     text-align: center;
     padding: 50px 20px;
-    background: var(--secondary-color);
     border-radius: 10px;
-}
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-.hero p {
-    font-size: 1.25rem;
-    margin-bottom: 30px;
 }
 .hero .btn {
     background: var(--primary-color);
@@ -83,6 +74,7 @@ img {
 .testimonials .testimonials-heading {
     width: 700px;
     margin-bottom: 50px;
+    
 }
 .testimonials-grid{
     display: grid;
@@ -96,14 +88,18 @@ img {
     grid-template-columns: 0.75fr 0.75fr;
     gap: 30px;
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 .pricing-card-description{
     margin-bottom: 20px;
 
 }
 .pricing-card-price{
-    margin-bottom:10px;
+    margin-bottom: 20px;
     padding:5px 0;
+}
+.pricing h4{
+    font-size: 1.5rem;
 }
 /* Faq */
 .faq {
@@ -157,6 +153,114 @@ ul.faq-menu li.active {
   background: var(--primary-color);
   color: #fff;
 }
+
+/* Recipes */
+
+.recipes-heading {
+    text-align: center;
+    font-size: 1rem;
+}
+.saved-recipes-heading {
+    text-align: center;
+    font-size: 1rem;
+    display: none;
+}
+.recipes-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    padding-bottom: 50px;
+}
+.recipes form {
+    margin-top: 30px;
+}
+
+.recipes-grid .card {
+    width: 400px;
+    margin: 0 auto;
+
+}
+.recipes input{
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin: 20px 0;
+}
+.recipe-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    
+}
+.recipe-ingredients {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+
+}
+.recipe-ingredients li {
+    padding-bottom: 5px;
+}
+.recipe-description{
+    font-size: 0.9rem;
+    color: #585858;
+}
+.form-container {
+    width: 50%;
+    background-color: var(--background-color);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.form-container button{
+    width: 100%;
+}
+
+.recipes .container:first-child {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* Footer */ 
+.footer {
+    padding: 45px 0;
+
+}
+.footer h4 {
+    margin-bottom: 10px;
+    
+}
+.footer ul li {
+    line-height:1.8;
+}
+.footer a{
+    color: #fff;
+}
+.footer i {
+    font-size: 1.6rem;
+    margin-right: 12px;
+}
+.footer-grid {
+    display:grid;
+    grid-template-columns: 2fr 1fr 1.2fr 1fr;
+    gap: 50px;
+}
+.footer .card{
+    margin: 20px 30px 30px 0;
+}
+.footer input[type="email"]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin: 20px 0;
+}
 /* Utility Classes */ 
 .container {
     max-width: 1100px;
@@ -200,7 +304,7 @@ ul.faq-menu li.active {
 }
 
 .text-xxl {
-    font-size: 2.5rem;
+    font-size: 3rem;
     line-height: 1.2;
     font-weight: 700;
     margin: 40px 0 20px
@@ -238,5 +342,112 @@ ul.faq-menu li.active {
 .bg-dark {
     background-color: #404c52;
     color: #fff;
+}
+/*Mobile-menu button*/
+.mobile-menu-button{
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 11px;
+    z-index: 1000;
+}
+.mobile-menu-button .mobile-menu-line{
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background: var(--primary-color);
+}
+
+/*Mobile-menu*/
+.mobile-menu{
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 150px;
+    height: 30%;
+    z-index: 100;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    transition: right 0.3s ease-in-out;
+}
+.mobile-menu.active{
+    right: 0px;
+}
+
+
+.mobile-menu ul{
+    margin-top: 100px;
+    padding-right: 10px;
+}
+.mobile-menu ul li {
+    margin: 10px 0;
+}
+.mobile-menu ul li a {
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+/* Media Queries */
+@media (max-width: 960px){
+    .text-xxl {
+        font-size: 2.5rem;
+    }
+    .text-xl {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:670px){
+    .navbar .main-menu {
+        display: none;
+    }
+
+    .navbar .mobile-menu-button{
+        display: block;
+    }
+    .testimonials-heading{
+        max-width: 100%;
+        text-align: center;
+    }
+    .testimonials-grid{
+        grid-template-columns: 1fr;
+    }
+    .testimonials p{
+        font-size: 0.9rem;
+    }
+    .pricing-grid{
+        grid-template-columns: 1fr;
+    }
+    .pricing h3{
+        max-width: 100%;
+        text-align: center;
+        font-size: 2rem;
+        margin: 30px 0;
+    }
+    .footer-grid{
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
+        
+    }
+    .footer .card{
+        margin-right: 0;
+        
+    }
+
+    .recipes-grid{
+        grid-template-columns: 1fr;
+
+    }
+    .form-container{
+        width: 90%;
+    }
+    .recipe-title{
+        font-size: 1.5rem;
+    }
+    .recipes-grid .card{
+        width: 450px;
+    }
 }
 
