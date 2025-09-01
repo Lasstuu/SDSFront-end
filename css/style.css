@@ -1,0 +1,453 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+:root {
+    --primary-color: #404c52;
+    --secondary-color: #a8d6f5;
+    --background-color: #f0f0f0;
+    --text-color: #6e8485;
+    --hover-color: #bfd9e6;
+}
+body {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+    
+}
+/* Navbar */
+.navbar {
+    background-color: #f0f0f0;
+    color: var(--text-color);
+    padding: 20px;
+}
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar .main-menu ul{
+    display: flex;
+}
+.navbar ul li a {
+    color: var(--text-color);
+    padding: 10px 15px;
+    font-weight: 600;
+    transition: 0.25s;
+}
+.navbar ul li a:hover{
+    color: var(--hover-color);
+}
+/*Hero*/
+.hero {
+    margin-bottom: 50px;
+}
+.hero .container {
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 10px;
+}
+.hero .btn {
+    background: var(--primary-color);
+    color: #fff;
+}
+/* Testimonials */
+.testimonials {
+    padding: 40px 0;
+}
+.testimonials .testimonials-heading {
+    width: 700px;
+    margin-bottom: 50px;
+    
+}
+.testimonials-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+/* Pricing */
+.pricing-grid{
+    display: grid;
+    grid-template-columns: 0.75fr 0.75fr;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.pricing-card-description{
+    margin-bottom: 20px;
+
+}
+.pricing-card-price{
+    margin-bottom: 20px;
+    padding:5px 0;
+}
+.pricing h4{
+    font-size: 1.5rem;
+}
+/* Faq */
+.faq {
+    padding: 40px 0;
+}
+.faq-group {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+.faq-group-header {
+    padding: 20px 0;
+    margin-bottom: 15px;
+    position: relative;
+}
+.faq-group-header h4 {
+    font-weight: 600;
+    width: 95%;
+}
+.faq-group-header i {
+    position: absolute;
+    right: 0;
+    top: 35px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.faq-group-body {
+    display: none;
+    
+}
+.faq-group-body.open {
+    display: block;
+}
+ul.faq-menu{
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ddd;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+ul.faq-menu li{
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+ul.faq-menu li.active {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+/* Recipes */
+
+.recipes-heading {
+    text-align: center;
+    font-size: 1rem;
+}
+.saved-recipes-heading {
+    text-align: center;
+    font-size: 1rem;
+    display: none;
+}
+.recipes-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    padding-bottom: 50px;
+}
+.recipes form {
+    margin-top: 30px;
+}
+
+.recipes-grid .card {
+    width: 400px;
+    margin: 0 auto;
+
+}
+.recipes input{
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin: 20px 0;
+}
+.recipe-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    
+}
+.recipe-ingredients {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+
+}
+.recipe-ingredients li {
+    padding-bottom: 5px;
+}
+.recipe-description{
+    font-size: 0.9rem;
+    color: #585858;
+}
+.form-container {
+    width: 50%;
+    background-color: var(--background-color);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.form-container button{
+    width: 100%;
+}
+
+.recipes .container:first-child {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* Footer */ 
+.footer {
+    padding: 45px 0;
+
+}
+.footer h4 {
+    margin-bottom: 10px;
+    
+}
+.footer ul li {
+    line-height:1.8;
+}
+.footer a{
+    color: #fff;
+}
+.footer i {
+    font-size: 1.6rem;
+    margin-right: 12px;
+}
+.footer-grid {
+    display:grid;
+    grid-template-columns: 2fr 1fr 1.2fr 1fr;
+    gap: 50px;
+}
+.footer .card{
+    margin: 20px 30px 30px 0;
+}
+.footer input[type="email"]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin: 20px 0;
+}
+/* Utility Classes */ 
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px
+}
+.container-sm {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px
+}
+/* Card */
+.card {
+    background: #fff;
+    color: #000;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+.btn {
+    display: inline-block;
+    padding: 13px 20px;
+    background: var(--background-color);
+    color: #333;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.25s;
+    text-align: center;
+}
+.btn-block{
+    display: block;
+    width: 100%;
+}
+
+.btn:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.text-xxl {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 700;
+    margin: 40px 0 20px
+}
+.text-xl {
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: normal;
+    margin: 40px 0 20px
+}
+.text-lg {
+    font-size: 1.75rem;
+    line-height: 1.2;
+    font-weight: normal;
+    margin: 30px 0 20px
+}
+.text-md {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    font-weight: normal;
+    margin: 20px 0 10px
+}
+.text-center {
+    text-align: center;
+}
+/*Background*/
+.bg-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.bg-light{
+    background-color: #a8d6f5;
+    color: #333;
+}
+.bg-dark {
+    background-color: #404c52;
+    color: #fff;
+}
+/*Mobile-menu button*/
+.mobile-menu-button{
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 11px;
+    z-index: 1000;
+}
+.mobile-menu-button .mobile-menu-line{
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background: var(--primary-color);
+}
+
+/*Mobile-menu*/
+.mobile-menu{
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 150px;
+    height: 30%;
+    z-index: 100;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    transition: right 0.3s ease-in-out;
+}
+.mobile-menu.active{
+    right: 0px;
+}
+
+
+.mobile-menu ul{
+    margin-top: 100px;
+    padding-right: 10px;
+}
+.mobile-menu ul li {
+    margin: 10px 0;
+}
+.mobile-menu ul li a {
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+/* Media Queries */
+@media (max-width: 960px){
+    .text-xxl {
+        font-size: 2.5rem;
+    }
+    .text-xl {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:670px){
+    .navbar .main-menu {
+        display: none;
+    }
+
+    .navbar .mobile-menu-button{
+        display: block;
+    }
+    .testimonials-heading{
+        max-width: 100%;
+        text-align: center;
+    }
+    .testimonials-grid{
+        grid-template-columns: 1fr;
+    }
+    .testimonials p{
+        font-size: 0.9rem;
+    }
+    .pricing-grid{
+        grid-template-columns: 1fr;
+    }
+    .pricing h3{
+        max-width: 100%;
+        text-align: center;
+        font-size: 2rem;
+        margin: 30px 0;
+    }
+    .footer-grid{
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
+        
+    }
+    .footer .card{
+        margin-right: 0;
+        
+    }
+
+    .recipes-grid{
+        grid-template-columns: 1fr;
+
+    }
+    .form-container{
+        width: 90%;
+    }
+    .recipe-title{
+        font-size: 1.5rem;
+    }
+    .recipes-grid .card{
+        width: 450px;
+    }
+}
+

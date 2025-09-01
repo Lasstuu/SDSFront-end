@@ -1,0 +1,13 @@
+{
+  "name": "sds-frontend",
+  "version": "1.0.0",
+  "description": "A simple recipe browser application",
+  "main": "index.html",
+  "homepage": "https://Lasstuu.github.io/SDSFront-end/",
+  "scripts": {
+    "deploy": "gh-pages -d ./"
+  },
+  "dependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
